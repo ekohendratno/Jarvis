@@ -1,9 +1,11 @@
-import React from 'react'
+import { create } from 'zustand'
 
-const voice = () => {
-  return (
-    <div>voice</div>
-  )
+type VoiceState = {
+  isMuted: boolean
+  setMuted: (muted: boolean) => void
 }
 
-export default voice
+export const useVoiceStore = create<VoiceState>((set) => ({
+  isMuted: false,
+  setMuted: (muted) => set({ isMuted: muted }),
+}))

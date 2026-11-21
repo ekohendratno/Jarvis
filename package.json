@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "setup:tts": "node scripts/setup-tts.mjs",
+    "dev": "next dev --hostname 127.0.0.1",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
+    "start": "next start --hostname 127.0.0.1",
+    "lint": "eslint src --ext .ts,.tsx",
     "type-check": "tsc --noEmit",
     "clear": "rm -rf node_modules package-lock.json .next"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
+    "@modelcontextprotocol/sdk": "^1.32.2",
     "@stripe/react-stripe-js": "^6.6.0",
     "@stripe/stripe-js": "^9.8.0",
     "@supabase/ssr": "^0.5.2",
@@ -21,17 +23,22 @@
     "date-fns": "^3.6.0",
     "framer-motion": "^11.18.2",
     "lucide-react": "^0.469.0",
-    "next": "14.2.29",
+    "next": "^15.5.29",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.54.2",
     "react-icons": "^5.4.0",
+    "react-markdown": "^10.1.0",
     "recharts": "^2.15.3",
+    "remark-gfm": "^4.0.1",
     "resend": "^6.12.3",
     "stripe": "^22.2.2",
     "tailwind-merge": "^2.6.0",
-    "zod": "^3.24.2",
+    "zod": "^4.6.7",
     "zustand": "^5.0.3"
+  },
+  "overrides": {
+    "postcss": "$postcss"
   },
   "devDependencies": {
     "@types/node": "^20.17.30",
@@ -39,8 +46,8 @@
     "@types/react-dom": "^18.3.5",
     "autoprefixer": "^10.4.21",
     "eslint": "^8.57.1",
-    "eslint-config-next": "14.2.29",
-    "postcss": "^8.5.3",
+    "eslint-config-next": "^15.5.29",
+    "postcss": "^8.5.33",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3"
   }

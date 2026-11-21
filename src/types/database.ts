@@ -1,9 +1,1 @@
-import React from 'react'
-
-const database = () => {
-  return (
-    <div>database</div>
-  )
-}
-
-export default database
+export type Json = string | number | boolean | null | { [key: string]: Json | undefined }

@@ -33,3 +33,14 @@ yarn-error.log*
 # environment variables — never commit secrets
 
 
+
+.env.local
+.env.*
+!.env.example
+
+# Local encrypted assistant data and reference captures
+/.jarvis/
+/.reference/
+/.next-backup-demo/
+/.venv-tts/
+/.tmp-*.png

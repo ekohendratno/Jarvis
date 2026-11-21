@@ -1,5 +1,17 @@
 # Create your own Jarvis AI personal assistant
 
+The local assistant implementation and setup are documented in [JARVIS.md](./JARVIS.md).
+
+## Local development and dummy login
+
+Run `npm install`, then `npm run dev` and open http://localhost:3000/login.
+The dummy account is prefilled: `demo@jarvis.local` / `Jarvis123!`.
+Click **Masuk demo** to enter the dashboard. No Supabase setup is needed for this mode.
+The session lasts 8 hours; signing out clears it. Restarting the server also invalidates demo sessions.
+
+Dummy login is only enabled in development. Set `DEMO_AUTH_ENABLED=false` in `.env.local`
+to use Supabase locally. Production always uses Supabase; configure the keys in `.env.example`.
+
 ![alt text](https://www.daulathussain.com/wp-content/uploads/2026/11/Build-Your-Own-JARVIS-AI-🤖-Connect-150-Apps-Voice-Control-Automate-Everything.jpg)
 
 - [Final Source Code](https://www.theblockchaincoders.com/sourceCode/build-your-own-jarvis-ai-connect-150+-apps-voice-control-and-automate-everything)

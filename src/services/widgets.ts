@@ -1,9 +1,2 @@
-import React from 'react'
-
-const widgets = () => {
-  return (
-    <div>widgets</div>
-  )
-}
-
-export default widgets
+// Starter placeholder: widget CRUD helpers go here.
+export {}

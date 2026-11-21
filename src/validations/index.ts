@@ -1,9 +1,2 @@
-import React from 'react'
-
-const index = () => {
-  return (
-    <div>index</div>
-  )
-}
-
-export default index
+// Starter placeholder: add zod schemas here.
+export {}

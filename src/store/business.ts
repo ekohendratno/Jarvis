@@ -1,9 +1,11 @@
-import React from 'react'
+import { create } from 'zustand'
 
-const business = () => {
-  return (
-    <div>business</div>
-  )
+type BusinessState = {
+  businessId: string | null
+  setBusinessId: (id: string | null) => void
 }
 
-export default business
+export const useBusinessStore = create<BusinessState>((set) => ({
+  businessId: null,
+  setBusinessId: (id) => set({ businessId: id }),
+}))
