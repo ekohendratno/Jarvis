@@ -1,8 +1,7 @@
 # Findings
 
-- Existing repository is a largely empty starter; prior turn implemented working development-only dummy authentication.
-- Demo video chapters: Features Demo 10:47, Starter File 23:07, Final Source Code 23:29.
-- Final source is separately sold; implement independently rather than downloading restricted code.
-- User requires visual fidelity to the video and real voice/computer/app execution.
-- Observed at 11:20: light gray sidebar, pink New Conversation button, navigation Network/Dashboard/Talk/Workflows/Files/Connections/Assistant/Account, large charcoal neural network canvas, central pink brain/orb, radial app nodes and green edges, transcript and composer underneath.
-- Upstream references reviewed: livekit/agents (voice), ComposioHQ/composio (app auth/tools), modelcontextprotocol/typescript-sdk (remote tools). Use MCP SDK as integration layer and native Windows bridge rather than importing a whole unrelated product UI.
+- Folder sumber tunggal: `C:\Users\eco\Downloads\Compressed\SAS\SMK\SOAL ASAS CBT GANJIL T.P 2026-2027-20261125T001259Z-1-001\SOAL ASAS CBT GANJIL T.P 2026-2027`.
+- Template: `C:\Users\eco\Downloads\Compressed\SAS\SMK\soal_word.docx`, tabel 150 slot, tiap soal 9 baris.
+- Output selesai: `SOAL_SAS_BAHASA_INDONESIA_KELAS_10_converted.docx`, `SOAL_SAS_BAHASA_INGGRIS_KELAS_10_converted.docx`.
+- Bacaan bersama wajib disalin ke pertanyaan terkait.
+- File kelas 10 tersisa punya format beragam: paragraf, tabel, auto-numbering, kunci di tabel.

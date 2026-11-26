@@ -1,10 +1,12 @@
 import 'server-only'
-import { createHmac, randomBytes, timingSafeEqual } from 'node:crypto'
+import { createHmac, timingSafeEqual } from 'node:crypto'
 import { cookies } from 'next/headers'
 import { DEMO_COOKIE, DEMO_EMAIL, isDemoEnabled } from './demo-config'
 
-const sessionGlobal = globalThis as typeof globalThis & { jarvisDemoSecret?: string }
-const secret = sessionGlobal.jarvisDemoSecret ??= randomBytes(32).toString('hex')
+// Server Actions and Server Components can be evaluated in different Next.js
+// workers during development. A per-worker random key invalidates a cookie just
+// after login, so use one stable development key unless the owner supplies one.
+const secret = process.env.DEMO_SESSION_SECRET || 'jarvis-local-demo-session-v1-change-in-production'
 const SESSION_SECONDS = 60 * 60 * 8
 
 function sign(value: string) {

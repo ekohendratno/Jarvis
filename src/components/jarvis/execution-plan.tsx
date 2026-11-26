@@ -1,6 +1,6 @@
 'use client'
 
-import { AlertTriangle, Check, FileText, Play, ShieldCheck, X } from 'lucide-react'
+import { AlertTriangle, Circle, FileText, Play, ShieldCheck, X } from 'lucide-react'
 
 export type ExecutionPlan = { command: string; steps: string[]; needsApproval: boolean; reason?: string }
 
@@ -25,7 +25,7 @@ export function createExecutionPlan(command: string): ExecutionPlan {
 export function ExecutionPlanCard({ plan, onApprove, onCancel }: { plan: ExecutionPlan; onApprove: () => void; onCancel: () => void }) {
   return <section className="execution-plan" aria-label="Rencana eksekusi">
     <div className="execution-plan-heading"><div><span className="execution-plan-icon"><FileText size={15}/></span><div><h3>Rencana eksekusi</h3><p>Jarvis akan menjalankan langkah berikut.</p></div></div><button className="icon-button" type="button" onClick={onCancel} aria-label="Batalkan rencana"><X size={15}/></button></div>
-    <ol>{plan.steps.map(step => <li key={step}><span><Check size={11}/></span>{step}</li>)}</ol>
+    <ol>{plan.steps.map(step => <li key={step}><span><Circle size={9}/></span>{step}</li>)}</ol>
     {plan.needsApproval && <div className="execution-risk"><AlertTriangle size={14}/><p>{plan.reason} Anda tetap dapat menghentikan proses setelah dimulai.</p></div>}
     <div className="execution-plan-actions"><button className="secondary-button" type="button" onClick={onCancel}>Edit perintah</button><button className="primary-button" type="button" onClick={onApprove}>{plan.needsApproval ? <ShieldCheck size={14}/> : <Play size={14}/>} {plan.needsApproval ? 'Setujui & jalankan' : 'Jalankan rencana'}</button></div>
   </section>
